@@ -11,6 +11,12 @@ public class CalculTVA {
     private static final BigDecimal TVA_IMPORT = BigDecimal.valueOf(0.05);
 
 
+    /**
+     * Determine le taux de TVA en fonction du produit
+     * @param categorie la categorie de produit
+     * @param estImporte si le produit est importé ou non
+     * @return le taux de TVA selon la categorie de produit
+     */
     public BigDecimal calculTva(CategorieProduit categorie, boolean estImporte) {
         return BigDecimal.ZERO
             .add(categorie == CategorieProduit.LIVRE ? TVA_LIVRE : BigDecimal.ZERO)
